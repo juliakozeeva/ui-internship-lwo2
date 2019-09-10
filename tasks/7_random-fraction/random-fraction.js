@@ -1,4 +1,4 @@
 function randomFraction() {
-    return Math.random();
+  return Math.random();
 }
-export {randomFraction};  
+export {randomFraction};

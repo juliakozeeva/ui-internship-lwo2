@@ -1,9 +1,9 @@
-function isBoolean (bool) {
-    if (bool === true || bool === false) {
-        return true
-      } else {
-        return false
-      }
+function isBoolean(bool) {
+  if (bool === true || bool === false) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 export {isBoolean};
