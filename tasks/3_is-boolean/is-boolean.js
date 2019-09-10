@@ -1,9 +1,5 @@
 function isBoolean(bool) {
-  if (typeof(bool) === 'boolean') {
-    return true;
-  } else {
-    return false;
-  }
+  return typeof(bool) === 'boolean';
 }
 
 export {isBoolean};
