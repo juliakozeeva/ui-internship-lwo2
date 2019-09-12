@@ -1,7 +1,8 @@
 function largestOfFour(arr) {
-  let largestArray = [];
+  const largestArray = [];
   for (let i = 0; i < arr.length; i++) {
-    largestArray.push(Math.max(...arr[i]));
+    let maxItem = Math.max(...arr[i]);
+    largestArray.push(maxItem);
   }
   return largestArray;
 }
