@@ -1,9 +1,4 @@
 function repeatStringNumTimes(str, num) {
-  let newStr = '';
-  while (num > 0) {
-    newStr += str;
-    num--;
-  }
-  return newStr;
+  return num > 0 ? str.repeat(num) : '';
 }
 export {repeatStringNumTimes};

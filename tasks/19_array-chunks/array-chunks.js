@@ -1,7 +1,7 @@
 function arrayChunks(arr, size) {
   let newArray = [];
-  for (let i = 0; i < arr.length; i+=size) {
-    newArray.push(arr.slice(i, i + size));
+  while (arr.length) {
+    newArray.push(arr.splice(0, size));
   }
   return newArray;
 }
