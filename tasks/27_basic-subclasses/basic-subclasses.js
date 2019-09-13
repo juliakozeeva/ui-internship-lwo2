@@ -6,12 +6,14 @@ class Human {
 }
 class Man extends Human {
   constructor(name, sex) {
-    super(name, 'male');
+    super(name, sex);
+    this.sex = 'male';
   }
 }
 class Woman extends Human {
   constructor(name, sex) {
-    super(name, 'female');
+    super(name, sex);
+    this.sex = 'female';
   }
 }
 
