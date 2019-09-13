@@ -21,5 +21,4 @@ class God {
     return [new Man('Adam'), new Woman('Eve')];
   }
 }
-
 export {God, Human, Man, Woman};
