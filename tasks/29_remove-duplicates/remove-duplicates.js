@@ -1,4 +1,4 @@
 function removeDuplicates(a) {
-  return a.filter((item, index) => a.indexOf(item) === index);
+  return Array.from(new Set(a));
 }
 export {removeDuplicates};
