@@ -4,13 +4,13 @@ class Human {
   }
 }
 class Man extends Human {
-  constructor(name, sex) {
+  constructor(name) {
     super(name);
     this.sex = 'male';
   }
 }
 class Woman extends Human {
-  constructor(name, sex) {
+  constructor(name) {
     super(name);
     this.sex = 'female';
   }
