@@ -6,18 +6,18 @@ class Human {
 }
 class Man extends Human {
   constructor(name, sex) {
-    super(name, sex);
+    super(name, 'male');
   }
 }
 class Woman extends Human {
   constructor(name, sex) {
-    super(name, sex);
+    super(name, 'female');
   }
 }
 
 class God {
   static create() {
-    return [new Man('Adam', 'male'), new Woman('Eve', 'female')];
+    return [new Man('Adam'), new Woman('Eve')];
   }
 }
 
