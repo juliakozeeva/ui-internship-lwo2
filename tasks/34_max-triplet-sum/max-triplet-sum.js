@@ -1,5 +1,8 @@
 // c is variable for triplet = 3, quartet = 4, quintet = 5 sum
 function maxTripletSum(array, c = 3) {
+  if (array.length <= 3) {
+    return [];
+  }
   if (array.length > c) {
     const newArray = array.sort(function(a, b) {
       return b - a;
@@ -7,12 +10,12 @@ function maxTripletSum(array, c = 3) {
     let tripletSum = 0;
     let cycle = 0;
     for (let i = 0; i < newArray.length; i++) {
-      if (newArray[i] == newArray[i+1]) {
+      if (newArray[i] === newArray[i+1]) {
         continue;
       }
       tripletSum += newArray[i];
       cycle++;
-      if (cycle == c) {
+      if (cycle === c) {
         break;
       }
     }
