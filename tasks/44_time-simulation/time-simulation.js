@@ -1,22 +1,20 @@
-class SimTime {
-  constructor() {
-    this.realTime = 0;
-    this.simTime = 0;
-    this.speed = 1;
-  }
+function SimTime() {
+  let realTime = 0;
+  let simTime = 0;
+  let speed = 1;
 
-  setSpeed(speed) {
-    this.speed = speed;
-  }
+  SimTime.prototype.setSpeed = function(newSpeed) {
+    speed = newSpeed;
+  };
 
-  update(realTime) {
-    this.simTime += (realTime - this.realTime) * this.speed;
-    this.realTime = realTime;
-  }
+  SimTime.prototype.update = function(newRealtime) {
+    simTime += (newRealtime - realTime) * speed;
+    realTime = newRealtime;
+  };
 
-  get() {
-    return this.simTime;
-  }
+  SimTime.prototype.get = function() {
+    return simTime;
+  };
 }
 
 export {SimTime};
