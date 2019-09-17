@@ -2,12 +2,8 @@
  * stringExpansion return the expansion of that string:
  * The numeric values represent the occurrence of each letter
  * preceding that numeric value
- * @param  {String} str
- * @param  {RegExp} regLetter
- * @param  {RegExp} regNumber
- * @param {String} newStr
- * @param {Number}  charIndex
- * @return  {String} Returns the value
+ * @param  {String} str that includes alphanumeric characters
+ * @return  {String} Returns string without numeric characters
  */
 function stringExpansion(str) {
   const regLetter = new RegExp(/^[A-Za-z]+$/);
