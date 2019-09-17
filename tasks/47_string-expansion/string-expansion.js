@@ -19,8 +19,9 @@ function stringExpansion(str) {
   for (let i = 0; i < str.length; i++) {
     if (regNumber.test(str[i])) {
       let charIndex = 1;
-      while ((regLetter.test(str[i+charIndex])) && (i+charIndex)<str.length) {
-        newStr += str[i+charIndex].repeat(Number(str[i]));
+      while ((regLetter.test(str[i + charIndex]))
+      && (i + charIndex) < str.length) {
+        newStr += str[i + charIndex].repeat(Number(str[i]));
         charIndex++;
       }
     }

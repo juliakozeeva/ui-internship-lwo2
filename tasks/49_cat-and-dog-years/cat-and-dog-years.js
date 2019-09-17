@@ -5,9 +5,9 @@ function humanYearsCatYearsDogYears(humanYears) {
     catYears += 9;
     dogYears += 9;
   }
-  if (humanYears > 2) {
-    catYears = catYears + (4 * (humanYears - 2));
-    dogYears = dogYears + (5 * (humanYears - 2));
+  for (let i = 3; i <= humanYears; i++) {
+    catYears += 4;
+    dogYears += 5;
   }
   return [humanYears, catYears, dogYears];
 }
