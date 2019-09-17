@@ -7,22 +7,15 @@
  */
 function stringExpansion(str) {
   const regLetter = new RegExp(/^[A-Za-z]+$/);
-  const regNumber = new RegExp(/^[0-9]$/);
+  const regNumber = new RegExp(/[^0-9]+$/);
   if (regLetter.test(str)) {
     return str;
   }
-  let newStr = '';
-  for (let i = 0; i < str.length; i++) {
-    if (regNumber.test(str[i])) {
-      let charIndex = 1;
-      while ((regLetter.test(str[i + charIndex]))
-      && (i + charIndex) < str.length) {
-        newStr += str[i + charIndex].repeat(Number(str[i]));
-        charIndex++;
-      }
-    }
-  }
-  return newStr;
+  return str.replace(/\d\D+/g, (item)=> {
+    const digit = item.replace(regNumber, '');
+    const letters = item.replace(regLetter, '');
+    return letters.split('').map((item)=>item.repeat(digit)).join('');
+  }).replace(/\d/g, '');
 }
 
 export {stringExpansion};
