@@ -1,7 +1,4 @@
 function followTheSpy(arr) {
-  function arrayRemove(arr, value) {
-    return arr.filter((el) => el !== value);
-  }
   const result = [];
   result.push(arr[0][0]);
   let lastPoint = arr[0][1];
@@ -23,6 +20,8 @@ function followTheSpy(arr) {
   result.push(arr[0][1]);
   return result.join(', ');
 }
-
+function arrayRemove(arr, value) {
+  return arr.filter((el) => el !== value);
+}
 
 export {followTheSpy};
