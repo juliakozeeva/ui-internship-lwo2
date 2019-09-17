@@ -6,7 +6,6 @@
  * @param {Array} arr of two numbers
  * @return {Number} sum of all numbers in range
  */
-
 function sumAll(arr) {
   const fullArray = [];
   const max = arr.reduce((a, b) => Math.max(a, b));

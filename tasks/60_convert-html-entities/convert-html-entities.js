@@ -18,7 +18,7 @@ function convertHTML(str) {
   };
   for (let key in htmlEntities) {
     if (htmlEntities.hasOwnProperty(key)) {
-      let regex = new RegExp(key, 'g');
+      const regex = new RegExp(key, 'g');
       str = str.replace(regex, htmlEntities[key]);
     }
   }

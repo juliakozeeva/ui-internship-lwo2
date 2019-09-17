@@ -10,8 +10,10 @@
  */
 
 function uniteUnique(...arrays) {
-  const totalArray = [].concat(...arrays);
-  return Array.from(new Set(totalArray));
+  const newArray = [];
+  const totalArray = newArray.concat(...arrays);
+  const set = new Set(totalArray);
+  return Array.from(set);
 }
 
 export {uniteUnique};
