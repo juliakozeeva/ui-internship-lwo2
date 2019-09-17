@@ -4,19 +4,8 @@ function maxTripletSum(array, c = 3) {
     const newArray = array.sort(function(a, b) {
       return b - a;
     });
-    let tripletSum = 0;
-    let cycle = 0;
-    for (let i = 0; i < newArray.length; i++) {
-      if (newArray[i] === newArray[i+1]) {
-        continue;
-      }
-      tripletSum += newArray[i];
-      cycle++;
-      if (cycle === c) {
-        break;
-      }
-    }
-    return tripletSum;
+    const noDublicate = Array.from( new Set(newArray));
+    return noDublicate.slice(0, c).reduce((a, b) => a + b);
   }
 }
 export {maxTripletSum};

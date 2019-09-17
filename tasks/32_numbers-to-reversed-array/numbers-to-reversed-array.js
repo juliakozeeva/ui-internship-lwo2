@@ -1,5 +1,5 @@
 function numberToReversedArray(number) {
-  return number.toString().split('').reverse().map((x)=> Number(x));
+  return number.toString().split('').reverse().map(Number);
 }
 
 export {numberToReversedArray};
