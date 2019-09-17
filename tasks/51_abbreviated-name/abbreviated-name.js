@@ -1,4 +1,7 @@
 /**
+ * @example
+ * // return Verbovyi D.
+ * abbreviated('Verbovyi Dmytro')
  * function abbreviated convert a fullname in abbreviated
  * @param {String} name, fullname string
  * @returns {String} returns string abbreviated of fullname

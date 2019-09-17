@@ -1,4 +1,7 @@
 /**
+ * @example
+ * // return "Dolce &amp; Gabbana"
+ * convertHTML("Dolce & Gabbana")
  * function convertHTML converts the characters
  * in a string to their corresponding HTML entities
  * @param {String} str with inccorect HTML entities

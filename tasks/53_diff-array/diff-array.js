@@ -1,4 +1,7 @@
 /**
+ * @example
+ * // return [4]
+ * diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])
  * function diffArray compare two arrays and return a new array with any items
  *  only found in one of arrays
  * @param {*} arr1 of any tipes

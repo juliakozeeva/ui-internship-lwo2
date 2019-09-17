@@ -1,4 +1,8 @@
 /**
+ * @example
+ * // return [{ "a": 1, "b": 2, "c": 2 }]
+ * whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }],
+ *  { "a": 1, "c": 2 })
  * function whatIsInAName looks through first argument and returns an array
  * of all objects that have matching property of second argument
  * @param {Object} collection, array of objects

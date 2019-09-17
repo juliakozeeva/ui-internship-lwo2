@@ -1,4 +1,7 @@
 /**
+ * @example
+ * // return "eightway"
+ * translatePigLatin("eight")
  * function translatePigLatin translate the provided string to pig latin
  * @param {String} str, word for translate
  * @return {String} return translate word

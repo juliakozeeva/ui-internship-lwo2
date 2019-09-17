@@ -1,4 +1,7 @@
 /**
+ * @example
+ * // return "II"
+ * convertToRoman(2)
  * function convertToRoman convert the given number into a roman numeral
  * @param {Number} num, arabic number
  * @return {String} string of roman number

@@ -1,4 +1,7 @@
 /**
+ * @example
+ * // return "d"
+ * findLetter("abce")
  * function findLetter finds the missing letter
  * in the passed letter range and returns it
  * @param {String} str, string with missing letter or not

@@ -1,4 +1,7 @@
 /**
+ * @example
+ * // return "His name is John"
+ * myReplace("His name is Tom", "Tom", "john")
  * function myReplace searches and replaces the sentence
  * using the supplied arguments and returns a new sentence
  * @param {String} str, the sentence to perform the search and replace on

@@ -1,4 +1,7 @@
 /**
+ * @example
+ * // return 10
+ * sumAll([1, 4])
  * sumAll function return the sum of range two numbers
  * @param {Array} arr of two numbers
  * @return {Number} sum of all numbers in range
