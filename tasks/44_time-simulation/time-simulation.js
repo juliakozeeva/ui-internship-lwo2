@@ -3,16 +3,16 @@ function SimTime() {
   let simTime = 0;
   let speed = 1;
 
-  SimTime.prototype.setSpeed = function(newSpeed) {
+  this.setSpeed = function(newSpeed) {
     speed = newSpeed;
   };
 
-  SimTime.prototype.update = function(newRealtime) {
+  this.update = function(newRealtime) {
     simTime += (newRealtime - realTime) * speed;
     realTime = newRealtime;
   };
 
-  SimTime.prototype.get = function() {
+  this.get = function() {
     return simTime;
   };
 }
