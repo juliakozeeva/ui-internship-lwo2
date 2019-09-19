@@ -8,16 +8,22 @@
  */
 function unpackArray(arr) {
   const result = [];
-  function flatten(arr) {
-    if (!Array.isArray(arr)) {
-      result.push(arr);
-    } else {
-      for (let i=0; i<arr.length; i++) {
-        flatten(arr[i]);
-      }
-    }
-  } flatten(arr);
+  flatten(arr, result);
   return result;
+  // hacking solution
   // return arr.flat(Infinity);
 }
+/**
+ * @example
+ * // return [1,2,3,4]
+ * flatten([1, [2], [3, [[4]]]], [])
+ * @param {Array} arr,  array of numbers of different nesting
+ * @param {Array} result, empty array
+ */
+function flatten(arr, result) {
+  arr.forEach(function(item) {
+    result.push(...(Array.isArray(item) ? unpackArray(item) : [item]));
+  });
+}
+
 export {unpackArray};
