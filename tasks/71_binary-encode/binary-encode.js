@@ -10,7 +10,7 @@ function binaryEncode(str) {
   if (typeof(str) === 'undefined') {
     return 'string';
   }
-  const array = str.split('').map((el) => el.charCodeAt(0).toString(2) + '')
+  const array = str.split('').map((el) => el.charCodeAt(0).toString(2))
       .map((el) => '0'.repeat(8 - el.length) + el);
   return array.join(' ');
 }

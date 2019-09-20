@@ -9,7 +9,7 @@
 function palindrome(str) {
   str = str.toLowerCase().replace(/[^a-z0-9]/g, '');
   const backword = str.split('').reverse().join('');
-  return backword === str ? true : false;
+  return backword === str;
 }
 export {palindrome};
 

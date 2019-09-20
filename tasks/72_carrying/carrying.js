@@ -11,15 +11,10 @@ function addTogether(first, second) {
   if (arguments.length === 1) {
     if (typeof first !== 'number') {
       return undefined;
-    } else {
-      return ((value) => {
-        if (typeof value !== 'number') {
-          return undefined;
-        } else {
-          return first + value;
-        }
-      });
     }
+    return ((value) => {
+      return typeof value !== 'number' ? undefined : first + value;
+    });
   } else {
     if (typeof first !== 'number' || typeof second !== 'number' ) {
       return undefined;

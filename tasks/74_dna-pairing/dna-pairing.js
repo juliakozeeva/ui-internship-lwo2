@@ -15,9 +15,6 @@ function pairElement(str) {
     T: 'A',
   };
   const dna = str.split('');
-  for (let i = 0; i < dna.length; i++) {
-    dna[i] = [dna[i], pairs[dna[i]]];
-  }
-  return dna;
+  return dna.map((index) => [index, pairs[index]]);
 }
 export {pairElement};

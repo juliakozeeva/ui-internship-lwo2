@@ -7,7 +7,7 @@
  * @return {Boolean} true if number is prime, false if not
  */
 function isPrime(x) {
-  for (let i = 2; i < x; i++) {
+  for (let i = 2; i <= Math.sqrt(x); i++) {
     if (x % i === 0) {
       return false;
     }
