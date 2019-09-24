@@ -54,8 +54,7 @@ class Person {
    * @return {String} The fullname value
    */
   setFullName(firstAndLast) {
-    this.fullname[0] = firstAndLast.split(' ')[0];
-    this.fullname[1] = firstAndLast.split(' ')[1];
+    this.fullname = firstAndLast.split(' ');
     return this.fullname.join(' ');
   }
 }

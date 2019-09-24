@@ -21,17 +21,7 @@ class LinkedList {
    */
   constructor() {
     this.head = null;
-  }
-  /**
-   * Get the size of linked list
-   * @return {Number} size of linked list
-   */
-  get amount() {
-    let result = 0;
-    this.iterate(function() {
-      return result++;
-    });
-    return result;
+    this.amount = 0;
   }
   /**
    * Get the  last cell of linked list
@@ -67,9 +57,11 @@ class LinkedList {
     const cell = new Cell({value, next: null});
     if (this.head === null) {
       this.head = cell;
+      ++this.amount;
       return;
     }
     this.tail.next = cell;
+    ++this.amount;
   }
   /**
    * Remove cell from the end
@@ -85,6 +77,7 @@ class LinkedList {
       cell = cell.next;
     }
     cell.next = null;
+    this.amount--;
   }
   /**
    * Has to insert new Cell after one with specified value
@@ -106,6 +99,7 @@ class LinkedList {
     let tempNextCell = cellToInsertAfter.next;
     cellToInsertAfter.next = newCell;
     newCell.next = tempNextCell;
+    ++this.amount;
     return true;
   }
   /**
@@ -122,6 +116,7 @@ class LinkedList {
       if (cellToRemove === null) return false;
     }
     beforeToRemove.next = cellToRemove.next;
+    this.amount--;
     return true;
   }
 }

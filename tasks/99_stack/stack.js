@@ -21,19 +21,7 @@ class Stack {
    */
   constructor() {
     this.last = null;
-  }
-  /**
-   * Get the size of stack
-   * @return {Number} size of stack
-   */
-  get size() {
-    let last = this.last;
-    let result = 0;
-    while (last !== null) {
-      result++;
-      last = last.prev;
-    }
-    return result;
+    this.size = 0;
   }
   /**
    * Сheck stack for empty
@@ -45,11 +33,13 @@ class Stack {
   /**
    * Add value to stack
    * @param {Number} value, integer
+   * @return {Number} size of stack
    */
   push(value) {
     const node = new Node({value, prev: null});
     node.prev = this.last;
     this.last = node;
+    return ++this.size;
   }
   /**
    * Remove top value from stack
@@ -61,6 +51,7 @@ class Stack {
       this.last = top.prev;
       return top.value;
     }
+    this.size--;
   }
 }
 export {Stack};
