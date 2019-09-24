@@ -52,14 +52,12 @@ function formatWorkingHours(workdays) {
   if (workdays.length === 0) {
     return [];
   } else {
-    const workdaysSort = [];
     const result = [];
     let row = 0;
     let i;
-    const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
-    for (i = 0; i < days.length; i++) {
-      workdaysSort[i] = workdays.find((d) => d.day === days[i]);
-    }
+    const days = {mon: 0, tue: 1, wed: 2, thu: 3, fri: 4, sat: 5, sun: 6};
+    const workdaysSort = [...workdays]
+        .sort((a, b) => days[a.day] - days[b.day]);
     for (i = 0; i < workdaysSort.length; i++) {
       if (workdaysSort[i]) {
         let str = workdaysSort[i].day;
