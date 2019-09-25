@@ -14,7 +14,7 @@ function fatFingers(str) {
   let reverse = false;
   for (let i = 0; i < str.length; i++) {
     if (str[i] === 'a' || str[i] === 'A') {
-      reverse ? reverse = false : reverse = true;
+      reverse = !reverse;
     }
     if (reverse) {
       if (str[i] === str[i].toUpperCase()) {

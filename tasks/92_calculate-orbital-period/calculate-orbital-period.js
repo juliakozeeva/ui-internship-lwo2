@@ -10,17 +10,17 @@ const EARTH_RADIUS = 6367.4447;
  * @return {Array} new array that transforms average altitude in orbital period
  */
 function orbitalPeriod(arr) {
+  const result = [];
   for (let prop in arr) {
     if (arr.hasOwnProperty(prop)) {
       const orbitalPeriod = Math.round(
           2 * Math.PI * Math.sqrt(Math.pow(arr[prop].avgAlt
           + EARTH_RADIUS, 3) / GM)
       );
-      delete arr[prop].avgAlt;
-      arr[prop].orbitalPeriod = orbitalPeriod;
+      result.push({name: arr[prop].name, orbitalPeriod: orbitalPeriod});
     }
   }
-  return arr;
+  return result;
 }
 
 export {orbitalPeriod};
