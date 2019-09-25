@@ -1,4 +1,4 @@
-// import { populateTable } from './populate-table';
+// import { populateTable }   from './populate-table';
 
 const students = [
   {
