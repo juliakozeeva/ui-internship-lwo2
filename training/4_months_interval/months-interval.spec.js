@@ -8,12 +8,12 @@ xdescribe('monthsInterval', () => {
 
   test('should handle case: Same month, different year', () => {
     expect(monthsInterval(new Date(2016, 0, 1), new Date(2017, 0, 1)))
-      .toEqual(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'OctoEqualr', 'November', 'December']);
+      .toEqual(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
   });
 
   test('should handle case: Same month, different year (reversed)', () => {
     expect(monthsInterval(new Date(2017, 0, 1), new Date(2016, 0, 1)))
-      .toEqual(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'OctoEqualr', 'November', 'December']);
+      .toEqual(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
   });
 
   test('should handle case: Month interval same year', () => {
@@ -38,21 +38,21 @@ xdescribe('monthsInterval', () => {
 
   test('should handle case: 2 years interval', () => {
     expect(monthsInterval(new Date(2017, 3, 1), new Date(2019, 3, 1)))
-      .toEqual(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'OctoEqualr', 'November', 'December']);
+      .toEqual(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
   });
 
   test('should handle case: 2 years interval (reversed)', () => {
     expect(monthsInterval(new Date(2019, 3, 1), new Date(2017, 3, 1)))
-      .toEqual(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'OctoEqualr', 'November', 'December']);
+      .toEqual(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
   });
 
   test('should handle case: Mutliple years and months interval', () => {
     expect(monthsInterval(new Date(2017, 3, 1), new Date(2043, 9, 1)))
-      .toEqual(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'OctoEqualr', 'November', 'December']);
+      .toEqual(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
   });
 
   test('should handle case: Mutliple years and months interval (reversed)', () => {
     expect(monthsInterval(new Date(2043, 9, 1), new Date(2017, 3, 1)))
-      .toEqual(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'OctoEqualr', 'November', 'December']);
+      .toEqual(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
   });
 });
