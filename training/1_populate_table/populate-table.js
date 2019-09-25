@@ -25,36 +25,31 @@
  * @param {Array} arr, array of objects
  */
 function populateTable(arr) {
-  let tableString = '<table>';
-  const body = document.getElementsByTagName('body')[0];
-  const div = document.createElement('div');
-  tableString += '<thead>';
-  tableString += '<tr>';
+  const table = document.createElement('table');
+  const header = document.createElement('tr');
   const keys = Object.keys(arr[0]);
   for (const key of keys) {
-    tableString += '<th>';
-    tableString += key;
-    tableString += '</th>';
+    const th = document.createElement('th');
+    th.appendChild(document.createTextNode(key));
+    header.appendChild(th);
   }
-  tableString += '</thead>';
+  table.appendChild(header);
   for (const row of arr) {
-    tableString += '<tr>';
+    const tr = document.createElement('tr');
     for (const key of keys) {
-      tableString += '<td>';
+      const td = document.createElement('td');
       if (row[key] === true) {
         row[key] = 'yes';
       } else if (row[key] === false) {
         row[key] = 'no';
       }
       const content = row[key];
-      tableString += content;
-      tableString += '</td>';
+      td.appendChild(document.createTextNode(content));
+      tr.appendChild(td);
     }
-    tableString += '</tr>';
+    table.appendChild(tr);
   }
-  tableString += '</table>';
-  div.innerHTML = tableString;
-  body.appendChild(div);
+  document.body.appendChild(table);
 }
 
 export {populateTable};
